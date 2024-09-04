@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 🙋‍♂️<a href="introduction">Introduction</a>
 
-## Getting Started
+**Overview**
 
-First, run the development server:
+This project provides a fully customizable authentication solution using NextAuth, designed to be open-source and reusable. Whether you're building a personal project or a large-scale application, this repository allows you to implement authentication effortlessly so that you can focus on your primary project goals.
+
+**Objective**
+
+The main objective of this project is to offer a plug-and-play authentication system that developers can easily integrate into their Next.js applications. With full customization options, users can tailor the authentication flow to suit their specific needs. By utilizing this solution, developers can bypass the complexities of building an authentication system from scratch and instead concentrate on the core aspects of their application.
+
+
+## 🤩<a href="quick-start">Quick Start</a>
+
+Follow these steps to set up the project locally on your machine.
+
+**Prerequisites**
+
+Make sure you have the following installed on your machine:
+
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en)
+- [npm](https://www.npmjs.com/) (Node Package Manager)
+
+**Cloning the repository and start building**
+
+```bash
+git clone https://github.com/ManishZ007/easy-authentication.git
+cd easy-authentication
+```
+
+**Installation**
+Install the project dependencies using npm
+
+```bash
+npm install
+```
+
+**Set Up Environment Variables**
+create a file called .env.loacl in your root root project and add this content in it
+
+```bash
+
+AUTH_SECRET= # Added by `npx auth`. Read more: https://cli.authjs.dev it will automatically generate this secret key
+NEXTAUTH_URL=http://localhost:3000/
+
+# Google
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+
+# github
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=
+
+# mongodb connection
+MONGODB_URL=
+
+```
+
+replace the placeholder values with your actual respective account credentials. You can obtain these credentials by signing up on the [GoogleClude](https://console.cloud.google.com/welcome), [MongoDB](https://www.mongodb.com/), [Github](https://github.com)
+
+**Running The Project**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚙️<a href="techologies-used">Technologies Used</a>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js**: A React framework for server-rendered applications.
+- **TypeScript**: A statically typed superset of JavaScript that enhances code reliability and maintainability.
+- **Mongoose**: An ODM (Object Data Modeling) library for MongoDB and Node.js, used here for managing data storage.
+- **Tailwind CSS**: A utility-first CSS framework for styling the user interface.
+- **NextAuth**: A complete authentication solution for Next.js applications.
+- **ShadCN**: A library for building user interfaces quickly and efficiently.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## ⭐<a href="features">Features</a>
+- **Customizable Authentication**: Fully customizable authentication flow, allowing users to add their own content and modify the authentication process as needed.
+- **User Management**
+   - Sign Up: Allow users to register an account.
+   - Sign In: Enable users to log into their accounts.
+   - Delete User: Users can delete their accounts if needed.
+   - Update User: Users can update their account details.
+- **Focus on Core Application**: By using this project, developers can offload the authentication process and focus on the main objectives of their application.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
