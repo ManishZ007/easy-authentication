@@ -82,6 +82,14 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
    - Delete User: Users can delete their accounts if needed.
    - Update User: Users can update their account details.
 - **Focus on Core Application**: By using this project, developers can offload the authentication process and focus on the main objectives of their application.
+- **Open Source**: This project is open-source, enabling contributions and adaptations by the developer community.
+- **Easy UI Development**: With ShadCN, building and customizing UI components is straightforward, saving development time.
+- **Theme Management**: Includes a theme toggle button that allows users to easily switch between light and dark themes, enhancing the user experience.
+
+
+## 🛠️<a href="customization">Customization</a>
+
+This project is designed to be fully customizable. You can modify the authentication pages, integrate additional providers, or change the data models according to your needs.
 
 
 
