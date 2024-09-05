@@ -1,5 +1,4 @@
 import { createUser } from "@/lib/actions/user.action";
-import { ApiResponse } from "@/types/ApiResponse";
 import bcrypt from "bcryptjs";
 
 export async function POST(request: Request) {
