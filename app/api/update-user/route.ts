@@ -1,5 +1,4 @@
 import { updateUser } from "@/lib/actions/user.action";
-import { ApiResponse } from "@/types/ApiResponse";
 
 export async function POST(request: Request) {
   try {
