@@ -139,3 +139,38 @@ export const updateUser = async (user: UpdateUserProps) => {
     );
   }
 };
+
+export const getUserByEmail = async (email: string) => {
+  try {
+    await dbConnect();
+
+    console.log(email);
+    const res = await UserModel.find({
+      email: email,
+    });
+
+    if (!res) {
+      return JSON.parse(
+        JSON.stringify({
+          success: false,
+          message: "user not found",
+        })
+      );
+    }
+
+    return JSON.parse(
+      JSON.stringify({
+        success: true,
+        message: "user found successfully",
+        user: res,
+      })
+    );
+  } catch (error) {
+    return JSON.parse(
+      JSON.stringify({
+        success: false,
+        message: "somthing went wrong",
+      })
+    );
+  }
+};

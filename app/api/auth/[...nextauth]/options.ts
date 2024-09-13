@@ -1,8 +1,13 @@
-import { createUser, loginUser } from "@/lib/actions/user.action";
+import {
+  createUser,
+  getUserByEmail,
+  loginUser,
+} from "@/lib/actions/user.action";
 import { NextAuthOptions } from "next-auth";
 import CredentialProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
 import GithubProvider from "next-auth/providers/github";
+import axios from "axios";
 
 export const authOptions: NextAuthOptions = {
   providers: [
@@ -86,11 +91,13 @@ export const authOptions: NextAuthOptions = {
       }
 
       if (user) {
-        token._id = user._id?.toString();
-        token.username = user.username;
-        token.email = user.email;
-        token.firstName = user.firstName;
-        token.lastName = user.lastName;
+        const findByEmail = await getUserByEmail(user.email as string);
+
+        token._id = findByEmail.user[0]._id;
+        token.username = findByEmail.user[0].username;
+        token.email = findByEmail.user[0].email;
+        token.firstName = findByEmail.user[0].firstName;
+        token.lastName = findByEmail.user[0].lastName;
       }
       return token;
     },
