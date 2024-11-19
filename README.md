@@ -45,7 +45,7 @@ npm install
 ```
 
 **Set Up Environment Variables**
-create a file called .env.loacl in your root root project and add this content in it
+create a file called .env.local in your root root project and add this content in it
 
 ```bash
 
